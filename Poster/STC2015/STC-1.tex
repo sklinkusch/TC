@@ -1,0 +1,136 @@
+\documentclass[12pt]{article}
+
+\usepackage{a4}
+\usepackage{epsfig}
+\usepackage{amsmath, amssymb}
+\usepackage{color}
+\usepackage{psfig}
+\usepackage{pstricks,pst-all}
+\usepackage[absolute]{textpos}
+\newcommand{\bra}[1]{\langle#1|}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\braket}[2]{\langle#1|#2\rangle}
+\newcommand{\bracket}[3]{\langle#1|#2|#3\rangle}
+\newcommand{\back}[1]{\!\!\!\!\!\!\!\!\!\!\!\! #1}
+\newcommand{\braaket}[2]{\langle#1||#2\rangle}
+\newcommand{\vex}[1]{\underline{#1}}
+\newcommand{\supop}[1]{\hat{\hat{#1}}}
+\newcommand{\exv}[1]{\left\langle #1 \right\rangle}
+\newcommand{\hhat}[1]{\hat{\hat{#1}}}
+\newcommand{\ents}[0]{\widehat{=}}
+\newcommand{\att}[0]{\frac{\hbar}{E_h}}
+\newcommand{\lcolx}[0]{blblue}
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{2ex}
+\setlength{\textwidth}{19cm}
+\setlength{\textheight}{29cm}
+\setlength{\headheight}{-3cm}
+\setlength{\oddsidemargin}{-2.cm}
+
+\pagestyle{empty}
+
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+
+\newrgbcolor{darkred}{0.8784 0.573 0.522 }
+\newrgbcolor{lightred}{1 0.863 0.733}
+\newrgbcolor{llred}{1.  1. 1.}
+\newrgbcolor{hellb}{.6 .6 1}
+\newrgbcolor{gray94}{.94 .94 .94}
+\newrgbcolor{blblue}{.2 .2 .7}
+\definecolor{medsgrin}{rgb}{.235, .702, .443}
+\definecolor{dunko}{rgb}{1,1,.3}
+
+\begin{document}
+
+\psframebox[fillcolor=white,fillstyle=solid,linewidth=3pt,
+linecolor=\lcolx,framearc=.2]{
+\begin{minipage}[c][27cm]{19cm}
+\vspace{15mm}
+{ \sffamily \Huge
+\begin{center}
+    \textbf{ \color{\lcolx} Aim}
+\end{center} }
+\vspace{-4mm}
+\sf
+%\vspace{3mm} %\bigskip
+\begin{itemize}
+    \item Reconstruction of a time-resolved photoelectron spectrum of an Au$_7^{-}$ cluster
+    \begin{itemize}
+	\item Excitation of the cluster to higher states or to a wavepacket using a first laser pulse
+	\item Excitation of the relaxed wavepacket to the ionization continuum using a second pulse
+	\item Varying delay times between the two pulses
+	\item Reconstruction of the spectrum from the kinetic energies of the ionized species
+    \end{itemize}
+\item Improvement of the temporal behaviour of the signal
+\item Possibility to improve the signal by taking higher excitations into account and to use every \\ arbitrarily chosen laser field
+\end{itemize}
+{ \sffamily \Huge
+\begin{center}
+    \textbf{ \color{\lcolx} The $\boldsymbol{\rho}$-TDCI method$^{(1,2)}$}
+\end{center} }
+\vspace{-4mm}
+\sf
+\vspace{3mm} \bigskip
+{\Large \bf \sf Theory}
+\begin{itemize}
+\item Goal: Solution of the Liouville-von-Neumann equation \\
+    \vspace{-0.3cm}
+\begin{displaymath}
+\hspace{-1cm}
+ \psframebox[fillcolor=yellow, fillstyle=solid, linewidth=2pt, framearc=.3]{
+     \frac{\partial \hat{\rho} (t)}{\partial t} = -i \left[\hat{H}_{el}, \hat{\rho}\right] +i \left[\vex{\hat{\mu}} \vex{F} (t), \hat{\rho} (t)\right] + \supop{\mathcal{L}}_D \hat{\rho} (t) 
+}
+\end{displaymath}
+within the space of CI eigenfunctions $\ket{n}$ with time-dependent expansion coefficients $\rho_{nm} (t)$ \\
+    \vspace{-0.3cm}
+\begin{displaymath}
+\hspace{-1cm}
+ \psframebox[fillcolor=yellow, fillstyle=solid, linewidth=2pt, framearc=.3]{
+     \hat{\rho} (t) = \sum\limits_{nm} \rho_{nm} (t) \ket{n}\bra{m}
+}
+\end{displaymath}
+\end{itemize}
+{\Large \bf \sf Photoionization$^{(3,4)}$}
+\begin{itemize}
+    \item Photoionization rate of an electronic state $\ket{n}$ is calculated as \\
+    \vspace{-0.3cm}
+\begin{displaymath}
+\hspace{-1cm}
+ \psframebox[fillcolor=yellow, fillstyle=solid, linewidth=2pt, framearc=.3]{
+ I_n = \begin{cases} 0 &\text{ , if } E_n < IP \\ \sum\limits_{a,r} |D_{a,n}^r|^2 \Omega_a^r &\text{ , if } E_n \ge IP \end{cases}
+}
+\end{displaymath} 
+with the ionization rate of a configuration state function \\
+    \vspace{-0.3cm}
+\begin{displaymath}
+    \hspace{-1cm}
+    \psframebox[fillcolor=yellow, fillstyle=solid, linewidth=2pt, framearc=.3]{
+    \Omega_a^r = \begin{cases} 0 &\text{ , if } \varepsilon_r \le 0 \\ \frac{\sqrt{\varepsilon_r}}{d} &\text{ , if } \varepsilon_r > 0 \end{cases}
+    }
+\end{displaymath}
+\end{itemize}
+{\Large \bf \sf Relaxation}
+\begin{itemize}
+\item Non dipole interactions and internal conversion is described using \\
+    \vspace{-0.3cm}
+\begin{displaymath}
+\hspace{-1cm}
+ \psframebox[fillcolor=yellow, fillstyle=solid, linewidth=2pt, framearc=.3]{
+     \Gamma_{m\rightarrow n} = \frac{|\exv{H}_{NAC}|^2}{\hbar^2 (\omega_{nm} + \omega_c)^2}
+     }
+\end{displaymath}
+with $|\exv{H}_{NAC}|^2$ as a system-dependent parameter and $\omega_c$ as the Matsubara frequency in an Ohmic expression of the phonon density of states \\
+    \vspace{-0.3cm}
+\begin{displaymath}
+\hspace{-1cm}
+ \psframebox[fillcolor=yellow, fillstyle=solid, linewidth=2pt, framearc=.3]{
+     J (\omega) = \eta \omega e^{-\omega/\omega_c}
+     }
+\end{displaymath}
+\end{itemize}
+\vspace{1cm}
+\end{minipage} }
+\vspace{3cm}
+\end{document}

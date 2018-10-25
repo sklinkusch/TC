@@ -1,0 +1,33 @@
+Kurze Anleitung zur Postererstellung
+====================================
+
+es werden gebraucht:
+1. ein Haupt-TeX-file, das den Hintergrund, die Titelbox, Position und Umrandung der anderen Textboxen enthält (hier: STC2008b.tex)
+2. viele weitere TeX-files für die einzelnen Textboxen (hier: STC-1.tex bis STC-4.tex), die jeweils als PostScript-Datei kompiliert werden (hier: STC-1.ps bis STC-4.ps) und dann eingebunden werden
+alle Dateien sind article, a4paper!
+=> STC2008b.ps (dann umbenannt in Klinkusch_STC2008b.ps), einmal kopieren (hier: Klinkusch_STC2008b_A0.ps) und diese Datei (PostScript) im Editor öffnen (vi, pico o.ä.) und nach %%BeginSetup suchen, danach die Passage
+
+TeXDict begin
+%%BeginPaperSize: a4
+a4
+%%EndPaperSize
+ end
+
+durch die Passage
+
+TeXDict begin
+2 dict dup /PageSize [2384 3370] put
+       dup /ImagingBBox null put
+setpagedevice
+4 4 scale
+ end
+
+ersetzen und die PostScript-Datei mit ps2pdf in eine entsprechende PDF-Datei umwandeln.
+
+Pfade zu verschiedenen Stilvorlagen (ich hoffe, von denen reißt mir jetzt keiner den Kopf ab):
+meine Vorlage (STC2008):        /user/klinkusch/Documents/Poster/STC2008b.tex                 (in ähnlicher Form vorher von Jan und von Tijo genutzt)
+Bastis Vorlage (STC2008):       /perm/basklau/STC2008/Poster/poster.tex
+Gernots Vorlage (STC2008):      /perm/gernot/Poster/gernot-STC08.tex
+Jadrankas Vorlage (STC2007):    /perm/gernot/Poster/poster/dokic-poster-STC07.tex
+Mathias' Vorlage (STC2007):     /perm/nest/poster/stc07/poster-boris-stc2007.tex
+weitere Anregungen auch unter www.ptc.tugraz.at/stc2008/ -> Photos zu finden

@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+
+\usepackage{a4}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{psfig}
+\usepackage{pstricks}
+\usepackage[absolute]{textpos}
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{2ex}
+\setlength{\textwidth}{19cm}
+\setlength{\textheight}{29cm}
+\setlength{\headheight}{-3cm}
+\setlength{\oddsidemargin}{-2.cm}
+
+\pagestyle{empty}
+
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+
+\newrgbcolor{darkred}{0.8784 0.573 0.522 }
+\newrgbcolor{lightred}{1 0.863 0.733}
+\newrgbcolor{llred}{1.  1. 1.}
+\newrgbcolor{hellb}{.6 .6 1}
+\newrgbcolor{gray94}{.94 .94 .94}
+\newrgbcolor{blblue}{.2 .2 .7}
+\definecolor{medsgrin}{rgb}{.235, .702, .443}
+\definecolor{dunko}{rgb}{1,1,.3}
+
+\begin{document}
+
+\psframebox[fillcolor=white,fillstyle=solid,linewidth=3pt,
+linecolor=blblue,framearc=.2]{
+\begin{minipage}[c][27cm]{19cm}
+\vspace{15mm}
+{ \sffamily \Huge
+\begin{center}
+\textbf{ \color{blblue} Summary}
+\end{center} }
+\vspace{-4mm}
+\sf
+\vspace{3mm}
+\bigskip \bigskip \bigskip
+{\Large \bf \sf Conclusions } \\
+\begin{itemize}
+\item Photoelectron spectrum can be reconstructed from a $\rho$-TDCI calculation
+\item Improved dependence of the signal on the delay time vs. TDDFT/FISH$^{(5)}$
+\item Dependence of the signal on the delay time can be explained from transition dipole moments
+\item Advantages of this method:
+\begin{itemize}
+\item Description of the system is systematically improvable
+\item Strong field excitations can be treated variationally (linear extension)
+\item Photoionization, relaxation, and internal conversion are included
+\end{itemize}
+\item Disadvantages:
+\begin{itemize}
+\item HF/CIS description is insufficient
+\item Better description of the experiment requires (D) calculation (more expensive)
+\end{itemize}
+\end{itemize} \bigskip \bigskip
+{\Large \bf \sf Outlook } \\
+\begin{itemize}
+\item Improve description of the experiment with various density functionals $\rightarrow$ TDCIS/DFT
+\item Improve description of photoionization, relaxation, and internal conversion
+\item Reduce computational requirements $\rightarrow$ propagation in CSF space and resolution of identity
+\end{itemize} \bigskip \bigskip
+{ \sffamily \Huge
+\begin{center}
+\textbf{ \color{blblue} References}
+\end{center} } \bigskip
+\begin{enumerate}
+\item T. Klamroth, \emph{Phys. Rev. B} \textbf{68}, 245421 (2003).
+\item J. C. Tremblay, T. Klamroth, and P. Saalfrank, \emph{J. Chem. Phys.} \textbf{129}, 084302 (2008).
+\item S. Klinkusch, P. Saalfrank, and T. Klamroth, \emph{J. Chem. Phys.} \textbf{131}, 114304 (2009).
+\item J. C. Tremblay, S. Klinkusch, T. Klamroth, and P. Saalfrank, \emph{J. Chem. Phys.} \textbf{134}, 044311 (2011).
+\item J. Stanzel, M. Neeb, W. Eberhardt, P. G. Lisinetskaya, J. Petersen, and R. Mitri\'c, \emph{Phys. Rev. A} \textbf{85}, 013201 (2012).
+\item F. Furche, R. Ahlrichs, P. Weis, C. Jacob, S. Gilb, T. Bierweiler, and M. M. Kappes, \emph{J. Chem. Phys.} {\bfseries 117}, 6982 (2002).
+\end{enumerate}
+
+
+\vspace{1cm}
+\end{minipage} }
+\vspace{3cm}
+\end{document}

@@ -1,0 +1,93 @@
+\documentclass[10pt]{article}
+
+\usepackage{a4}
+\usepackage{epsfig}
+\usepackage{color}
+\usepackage{psfig}
+\usepackage{pstricks}
+\usepackage[absolute]{textpos}
+
+\setlength{\parindent}{0cm}
+\setlength{\textwidth}{20.8cm}
+\setlength{\textheight}{29.7cm}
+\setlength{\headheight}{0cm}
+\setlength{\topmargin}{-1.cm}
+\setlength{\hoffset}{0cm}
+\setlength{\evensidemargin}{-2.5cm}
+\setlength{\oddsidemargin}{-2.5cm}
+
+\pagestyle{empty}
+
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+\newcommand{\lcolx}[0]{blblue}
+
+\newrgbcolor{darkred}{0.8784 0.573 0.522 }
+\newrgbcolor{lightred}{1 0.863 0.733}
+\newrgbcolor{llred}{1.  1. 1.}
+\newrgbcolor{hellb}{.4 .7 1}
+\newrgbcolor{mylightblue}{0.25 0.35 1.0}
+\newrgbcolor{lskyblue1}{0.69 0.886 1.}
+\newrgbcolor{blblue}{.2 .2 .7}
+\newrgbcolor{vlblue}{.85 .85 .90}
+\definecolor{dunko}{rgb}{1,1,.3}
+\definecolor{lachs}{rgb}{0.8353,0.5922,0.5373}
+\definecolor{rrot}{rgb}{0.9059,0.1451,0.0706}
+\definecolor{fubblau}{rgb}{0.01960784313725490196,0.09803921568627450980,0.39215686274509803921}
+
+\begin{document}
+\pagecolor{fubblau}
+% ------------------------------- Head --------------------------------
+
+{\sffamily
+\vspace{5mm}
+\begin{textblock}{14.4}(1.8,.35)
+  \begin{center}
+    \psframebox[fillcolor=white,fillstyle=solid,linewidth=3pt,
+    linecolor=\lcolx,framearc=.2]{
+	\begin{minipage}[t]{40mm}
+	    \vspace{8mm}
+	    {\large \textbf { \color{black} \sffamily \hspace{5mm}}}
+	\end{minipage}
+	\hspace{-18mm}
+	\begin{minipage}[t]{111mm}
+	    \begin{center}
+		\vspace{2mm}
+		{\large \textbf{\color{\lcolx} \sffamily
+		\hspace{-10mm} Simulations of time-resolved photoelectron spectra using extended time-dependent configuration interaction methods}}
+		\vspace{.2cm} \\
+		{\  \normalsize \hspace{-10mm} \underline{Stefan Klinkusch} and Jean Christophe Tremblay \\
+		    \vspace{0.08cm}
+		    {\scriptsize \hspace{-10mm}
+		Freie Universit\"at Berlin, Physikalische und Theoretische Chemie, Takustra\ss{}e 3, 14195 Berlin, Germany \vspace{-1.5mm} \\
+	        Contact: stefan.klinkusch@fu-berlin.de, jc.tremblay@fu-berlin.de} }
+	    \end{center}
+	    \vspace{2mm}
+	\end{minipage}
+      \begin{minipage}[t]{20mm}
+        \vspace{2mm}
+        \epsfig{file=fu-wappen.eps,width=20mm,clip=}
+      \end{minipage}
+      \hspace{10mm}
+      }
+  \end{center}
+\end{textblock}
+
+\begin{textblock}{9}(1.4,4.3)
+  \epsfig{file=STC-1.ps,width=9cm}
+\end{textblock}
+
+\begin{textblock}{9}(10.63,4.3)
+  \epsfig{file=STC-2.ps,width=9cm}
+\end{textblock}
+
+\begin{textblock}{9}(1.4,16.6)
+  \epsfig{file=STC-3.ps,width=9cm}
+\end{textblock}
+
+\begin{textblock}{9}(10.63,16.6)
+  \epsfig{file=STC-4.ps,width=9cm}
+\end{textblock}
+
+
+\end{document}

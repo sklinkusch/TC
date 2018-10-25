@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+
+\usepackage{a4}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{psfig}
+\usepackage{pstricks}
+\usepackage[absolute]{textpos}
+\usepackage{units}
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{2ex}
+\setlength{\textwidth}{19cm}
+\setlength{\textheight}{29cm}
+\setlength{\headheight}{-3cm}
+\setlength{\oddsidemargin}{-2.cm}
+
+\pagestyle{empty}
+
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+
+\newcommand{\lcolx}[0]{blblue}
+
+\newrgbcolor{darkred}{0.8784 0.573 0.522 }
+\newrgbcolor{lightred}{1 0.863 0.733}
+\newrgbcolor{llred}{1.  1. 1.}
+\newrgbcolor{hellb}{.6 .6 1}
+\newrgbcolor{gray94}{.94 .94 .94}
+\newrgbcolor{blblue}{.2 .2 .7}
+\definecolor{medsgrin}{rgb}{.235, .702, .443}
+\definecolor{dunko}{rgb}{1,1,.3}
+
+\begin{document}
+
+\psframebox[fillcolor=white,fillstyle=solid,linewidth=3pt,
+linecolor=\lcolx,framearc=.2]{
+\begin{minipage}[c][27cm]{19cm}
+\vspace{15mm}
+{ \sffamily \Huge
+\begin{center}
+\textbf{ \color{\lcolx} Probe excitation}
+\end{center} }
+\vspace{-4mm}
+\sf
+\vspace{3mm}
+{\Large \bf \sf Signal reconstruction } \\
+\begin{minipage}[!t]{9cm}
+\begin{center}
+\epsfig{file=rho-trpes.eps, width=9cm, clip=}
+\end{center}
+\end{minipage} 
+\begin{minipage}[!t]{9.5cm}
+\begin{itemize}
+\item $N$ electron system consists of $m$ nonionizing and $(N-m)$ ionizing states
+\item coherences among ionizing states are neglected, populations are kept
+\item only populations of $(N-1)$ electron system are kept, no coherences
+\item coupling between $N$ and $(N-1)$ electron system via ionization
+\item coupling within $N$ electron system via elastic and inelastic processes
+\end{itemize}
+\end{minipage}
+{\Large \bf \sf TRPES signal } \\
+\begin{minipage}[!t]{9.5cm}
+\begin{center}
+\epsfig{file=au7-trpesMOD.eps, width=8cm, clip=}
+\end{center}
+\end{minipage}
+\begin{minipage}[!t]{9.5cm}
+\begin{center}
+\epsfig{file=au7-trpes3dfilteredMOD.eps, width=8cm, clip=}
+\end{center}
+\end{minipage} \\ 
+\begin{minipage}[!t]{17.5cm}
+\begin{itemize}
+\item Signals at kinetic energies lower than $\unit[1.3]{eV}$ decrease for higher delay times (as in experiment)
+\item Signals at kinetic energies higher than $\unit[1.3]{eV}$ increase for higher delay times (artifact)
+\end{itemize}
+\end{minipage} \\
+{\Large \bf \sf Interpretation } \\
+\begin{minipage}[t]{18.5cm}
+\begin{itemize}
+\item Difference signal is calculated as \\
+\end{itemize}
+\begin{displaymath}
+\hspace{-1cm}
+\psframebox[fillcolor=yellow,fillstyle=solid,linewidth=2pt,framearc=.3]{
+\Delta S_{probe} (E_{kin}) = S_{probe} (E_{kin}, t_{delay} = \unit[6]{ps}) - S_{probe} (E_{kin}, t_{delay} = \unit[100]{fs})
+}
+\end{displaymath}
+\end{minipage} \\*[0.5cm]
+\begin{minipage}[!t]{9cm}
+\begin{center}
+\epsfig{file=au7-diffkin2.eps, width=8cm, clip=}
+\end{center}
+\end{minipage}
+\begin{minipage}[!t]{9.5cm}
+\begin{itemize}
+\item Positive signals arise from excitations from the ground state
+\item Negative signals arise from excitations from the first excited state
+\item Below $\unit[1.3]{eV}$ stronger signals on negative side
+\item Above $\unit[1.3]{eV}$ stronger signals on positive side
+\item Reason is a high transition dipole moment from the ground state to ionization continuum
+\end{itemize}
+\end{minipage} \\
+\bigskip
+\vspace{1cm}
+\end{minipage} }
+\vspace{3cm}
+\end{document}
