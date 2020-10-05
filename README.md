@@ -24,6 +24,7 @@ Publications of the group of Peter Saalfrank
 * Stefan Klinkusch, Peter Saalfrank, and Tillmann Klamroth, "Laser-induced electron dynamics including photoionization: A heuristic model within time-dependent configuration interaction theory", _J. Chem. Phys._ **131**, 114304 (2009).
 * Jean Christophe Tremblay, Stefan Klinkusch, Tillmann Klamroth, and Peter Saalfrank, "Dissipative many-electron dynamics of ionizing systems", _J. Chem. Phys._ **134**, 044311 (2011).
 * Stefan Klinkusch and Jean Christophe Tremblay, "Resolution-of-identity stochastic time-dependent configuration interaction for dissipative electron dynamics in strong fields", _J. Chem. Phys._ **144**, 184108 (2016).
+* Peter Saalfrank, Florian Bedurke, Chiara Heide, Tillmann Klamroth, Stefan Klinkusch, Pascal Krause, Mathias Nest, and Jean Christophe Tremblay, "Molecular attochemistry: Correlated electron dynamics driven by light", _Adv. Qu. Chem._ **81**, 15-50 (2020).
 
 ### sonstige
 
